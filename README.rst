@@ -116,7 +116,7 @@ If you are not sure if this could help your case, drop us a message! It'll be a 
 Community
 ---------
 
-Help us by adding `Issues https://github.com/huogerac/cookiecutter-django-magic-content/issues>`_ about something that you don't feel it's right
+Help us by adding `Issues <https://github.com/huogerac/cookiecutter-django-magic-content/issues>`_ about something that you don't feel it's right
 
 If you don't agree the technology, some feature or the decision we've made, no problem! we're totally open for suggestion!
 
