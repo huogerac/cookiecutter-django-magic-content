@@ -1,0 +1,140 @@
+{% extends 'core/base_core.html' %}
+
+{% load static %}
+{% load magiccontent_tags %}
+
+{% block navbar %}
+  {% show_widget_area_tag 'top-menu' can_edit 'menuitem' page_url=page_url %}
+{% endblock navbar %}
+
+{% block post_navbar %}
+  <section id="main-background" class="main-background">
+    {% show_widget_area_tag 'main-background' can_edit 'background' div='main-background' %}
+  </section>
+  {% if can_edit %}
+    <section id="main-notification" class="main-notification">
+      <div>
+        <a id="menu-toggle" href="#menu-toggle">
+          <i class="fa fa-gear"></i> <span class="text animated infinite delay-04s">More</span>
+        </a>
+      </div>
+    </section>
+  {% endif %}
+{% endblock post_navbar %}
+
+{% block content %}
+  {% if 'content-intro'|is_area_visible %}
+    <section id="content-intro" class="content-intro content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content
+                                   Unique Section NAME
+                                   |
+                                   |                      -->
+          {% show_widget_area_tag 'content-intro' can_edit div='content-intro' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'content-one'|is_area_visible %}
+    <section id="content-one" class="content-one content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content
+                                                          Default Section TYPE
+                    Default names are used when widgets   |                  Default STYLE
+                    are created for the first time        |                  |
+                                                          |                  |     -->
+          {% show_widget_area_tag 'content-one' can_edit 'textimagecontent' 'list3' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'content-two'|is_area_visible %}
+    <section id="content-two" class="content-two content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'content-two' can_edit 'formattedtextimagecontent' 'list3' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'divider-one'|is_area_visible %}
+    <section id="divider-one" class="divider-one divider-padding">
+      <div class="container container-padding text-center">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'divider-one' can_edit 'dividertextcontent' div='divider-one' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'content-three'|is_area_visible %}
+    <section id="content-three" class="content-three content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'content-three' can_edit %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'content-four'|is_area_visible %}
+    <section id="content-four" class="content-four content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'content-four' can_edit %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'divider-two'|is_area_visible %}
+    <section id="divider-two" class="divider-two divider-padding">
+      <div class="container container-padding text-center">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'divider-two' can_edit 'dividertextcontent' 'button' div='divider-two' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'content-five'|is_area_visible %}
+    <section id="content-five" class="content-five content-padding">
+      <div class="container container-padding">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'content-five' can_edit 'formattedtextimagecontent' 'list3' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {% if 'divider-three'|is_area_visible %}
+    <section id="divider-three" class="divider-three divider-padding">
+      <div class="container container-padding text-center">
+        <div class="row">
+          <!-- dynamic content -->
+          {% show_widget_area_tag 'divider-three' can_edit 'dividertextcontent' div='divider-three' %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endblock content %}
+
+{% block js %}
+  <!-- Custom and Common JS -->
+  <script src="{% static 'frontend/themes/default/js/scripts.js' %}"></script>
+{% endblock js %}
+
+{% block extrajs %}
+  <script>
+    $(document).ready(function() {
+      $("#menu-toggle, #menu-toggle-close").on("click", function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+      });
+      $("a[data-toggle='tooltip']").tooltip();
+    });
+  </script>
+{% endblock extrajs %}

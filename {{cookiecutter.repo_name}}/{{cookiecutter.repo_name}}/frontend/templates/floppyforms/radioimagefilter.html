@@ -1,0 +1,20 @@
+<!-- floppyforms/radioimagefilter.html -->
+<a id="btn_{{ attrs.id }}" href="#" class="btn btn-default btn-sm">
+  <i class="fa fa-magic" style="font-size: 22px;"></i>
+  <br>Image Filter
+</a>
+<div class="row radioicon" id="{{ attrs.id }}">
+  <div data-toggle="buttons">
+    {% for group_name, choices in optgroups %}
+      {% for choice in choices %}
+        <label class="btn col-sm-3 radioicon-label{% if choice.0 in value %} active{% endif %}">
+          <div class="radioicon-control">
+            <img width="130" src="{{ choice.1.picture.url }}" class="{{ choice.0 }}">
+            <input type="radio" class="icon_selector" id="{{ attrs.id }}_{{ forloop.counter }}" value="{{ choice.0 }}" name="{{ name }}"{% if required %} required{% endif %}{% if choice.0 in value %} checked{% endif %}>
+            <p>{{ choice.0|default:"Original" }}</p>
+          </div>
+        </label>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,319 @@
+/* -------------------- S Y D N E Y -------------------- */
+
+html,
+button,
+input,
+select,
+textarea,
+body
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+/* main-background -------------------- */
+
+body > .flex-container
+    position: relative
+    z-index: -1
+    .flexslider
+        border: 0
+        position: fixed
+        top: 0
+        width: 100%
+
+#wrapper
+    background-attachment: fixed
+    background-position: center bottom
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    position: static
+    z-index: 10
+
+.main-background
+    height: 833px
+    padding: 115px 0 300px
+    width: 100%
+
+.main-background .header-inner
+    padding: 60px 0
+
+.main-background h1
+    font-size: 68px
+    letter-spacing: 12px
+    margin: 10px
+
+.main-background h1 + p
+    font-size: 34px
+
+.main-background p
+    font-size: 1.2em
+    letter-spacing: 1px
+
+.main-background .og-details
+    float: none
+    margin: 0 auto 90px
+    width: 320px
+
+.main-background #scrolldown-indicator i
+    font-size: 36px
+
+nav.slides-pagination
+    background-color: transparent
+    margin-bottom: 20px
+
+nav.slides-pagination a
+    height: 20px
+    width: 20px
+
+.slides-container .container
+    margin-top: 120px
+
+.slides-container .container h1
+    font-size: 38px
+    font-weight: 300
+    text-shadow: 0 1px 1px #000
+
+.slides-container .contrast
+    background: rgba(0, 0, 0, 0.3)
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    -ms-border-radius: 3px
+    -o-border-radius: 3px
+    border-radius: 3px
+    -webkit-box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.4)
+    -moz-box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.4)
+    box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.4)
+    margin-top: 50px
+    padding: 1px 10px
+
+.slides-container .contrast p
+    color: #fff
+    font-size: 2.3em
+    text-shadow: 0 1px 1px #555
+
+.decorator
+    background: url(../img/title_decorator.png) no-repeat center bottom
+    color: rgb(53, 53, 53)
+    font-size: 15px
+    font-weight: bold
+    letter-spacing: 1px
+    margin-bottom: 20px
+    padding-bottom: 20px
+    text-align: center
+    text-transform: uppercase
+
+.down-arrow-btn
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
+    -o-border-radius: 50%
+    border-radius: 50%
+    display: inline-block
+    font-size: 16px
+    height: 40px
+    line-height: 40px
+    margin: 10px auto 20px
+    text-align: center
+    width: 40px
+
+.up-btn
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
+    -o-border-radius: 50%
+    border-radius: 50%
+    display: block
+    font-size: 18px
+    height: 50px
+    left: 0
+    line-height: 46px
+    margin: 0 auto
+    position: absolute
+    right: 0
+    text-align: center
+    top: -26px
+    width: 50px
+
+.img .overlay
+    display: block
+    overflow: hidden
+    position: absolute
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    -o-transition: all 0.5s
+    transition: all 0.5s
+    z-index: 20
+
+.icon-circle
+    -o-border-radius: 50%
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    display: block
+    font-size: 32px
+    height: 105px
+    line-height: 105px
+    margin: 0 auto
+    max-width: 100%
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 105px
+
+.icon-circle-lg
+    -o-border-radius: 50%
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    display: block
+    font-size: 56px
+    height: 175px
+    line-height: 175px
+    margin: 0 auto 20px
+    max-width: 100%
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 175px
+
+/* divider-one -------------------- */
+
+.divider-one,
+.divider-three
+    position: relative
+    overflow: auto
+    z-index: 1
+
+body > .bg-holder,
+.divider-one .bg-holder,
+.divider-three .bg-holder
+    -webkit-backface-visibility: hidden
+    background: no-repeat center center
+    background-attachment: scroll
+    background-size: cover
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+
+body > .bg-holder
+    min-height: 833px;
+    z-index: 0
+
+.divider-one h1
+    font-size: 40px
+    letter-spacing: 5px
+    text-transform: uppercase
+
+.divider-one h1 span
+    display: block
+    font-size: 25px
+    margin-top: 20px
+
+/* divider-three -------------------- */
+
+.divider-three .bg-holder
+    padding: 120px 0 140px
+
+.divider-three h1
+    margin-bottom: 40px
+
+.divider-three h1 span
+    display: block
+    font-size: 15px
+    font-weight: bold;
+    letter-spacing: 1px
+    margin-top: 20px
+    text-transform: uppercase
+
+.divider-three input[type=text]
+    background-color: rgba(255, 255, 255, 0.1)
+    border: solid 1px
+    padding: 20px
+    width: 30%
+
+.divider-three input[type=submit]
+    background: rgba(61, 201, 179, 0.5)
+    border: solid 1px rgba(61, 201, 179, 0.5)
+    letter-spacing: 1px
+    padding: 20px
+    text-transform: uppercase
+    transition: all 0.5s ease
+    -moz-transition: all 0.5s ease
+    -webkit-transition: all 0.5s ease
+    -o-transition: all 0.5s ease
+
+.divider-three input[type=submit]:hover
+    background: rgba(61, 201, 179, 1)
+    border: solid 1px rgba(61, 201, 179, 1)
+
+/* CTA -------------------- */
+
+.divider-two
+    padding: 70px 0
+
+/* Team -------------------- */
+
+.divider-five img
+    margin-bottom: 40px
+
+ul.social-buttons
+    list-style: none
+    margin: 0
+    padding: 0
+
+ul.social-buttons li
+    display: inline-block
+    margin-right: 10px
+
+ul.social-buttons li:last-child
+    margin-right: 0
+
+.social-btn
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
+    -o-border-radius: 50%
+    border-radius: 50%
+    display: inline-block
+    font-size: 17px
+    height: 40px
+    line-height: 40px
+    text-align: center
+    width: 40px
+
+.social
+    margin-top: 25px
+
+/* Footer -------------------- */
+
+footer
+    padding: 40px 0 30px
+
+ul.legals
+    list-style: none
+    line-height: 25px
+
+ul.legals li
+    display: inline-block
+
+ul.legals li::after
+    content: " |"
+
+ul.legals li:last-child::after
+    content: ""
+
+.legals
+    text-align: left
+
+.credit
+    text-align: right
+
+/* FlexSlider Custom CSS -------------------- */
+
+#servicesSlider
+    margin-top: 70px
+
+ul.slides li
+    margin-bottom: 20px

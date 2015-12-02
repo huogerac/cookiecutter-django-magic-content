@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Lato-Lig';
+    src: url('/static/themes/default/fonts/Lato-Lig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+body {
+    font-family: "Lato-Lig", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.fontlight {
+    font-family: "Lato-Lig", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.fontcaption {
+	font-size: 82px;
+}
+
+.fontsubcaption {
+	font-size: 42px;
+}

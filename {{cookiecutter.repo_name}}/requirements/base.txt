@@ -1,0 +1,31 @@
+# Versions are left out on purpose in order for you to use the latest ones.
+# After the first "pip install -r", just run "pip freeze" and add the version
+# to each package in each requirements/*.txt.
+
+Django==1.7.11
+django-floppyforms==1.2.0
+django-ckeditor==4.5.1
+django-extensions==1.3.10
+django-braces==1.4.0
+django-bower==5.0.2
+Pillow==2.9.0
+django-image-cropping==1.0.0
+easy-thumbnails==2.2
+djangorestframework==2.4.3
+django-model-utils==2.3.1
+libsass==0.5.1
+sh==1.11
+django-taggit==0.14.0
+
+## Djenie general apps
+-e git://github.com/DjenieLabs/django-multisites-utils.git#egg=django-multisites-utils
+-e git://github.com/DjenieLabs/django-magicbackup.git#egg=django-magicbackup
+
+# Magic Themes
+-e git://github.com/DjenieLabs/django-frontend-decouple.git#egg=django-frontend-decouple
+-e git://github.com/DjenieLabs/django-magicthemes.git#egg=django-magicthemes
+
+# Magic Contents
+-e git://github.com/DjenieLabs/django-magic-gallery.git#egg=django-magic-gallery
+-e git://github.com/DjenieLabs/django-magic-content.git#egg=django-magic-content
+-e git://github.com/DjenieLabs/django-magic-content-navigation.git#egg=django-magic-content-navigation

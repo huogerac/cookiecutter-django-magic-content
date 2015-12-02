@@ -1,0 +1,71 @@
+{% extends 'core/base_core.html' %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block slider_area %}
+{% endblock %}
+
+{% block content %}
+
+	<div align="center">
+		<br/><br/>
+		<div>
+			<h1>Glossary</h1>
+		</div>
+		<br/><br/>
+	</div>
+
+  <section class="intro section-padding">
+
+    <div class="container">
+
+      <div class="row">
+          <div class="col-md-2">
+            <h1><strong>Area</strong></h1>
+          </div>
+          <div class="col-md-10">
+            <h3>One web page is divided in Areas such as Header, Navigation, Main Content, Sections and Footer.<br/>
+              <small>IMPORTANT: The amount of areas inside one page is limited, usually something around 8 or 10 areas per page.</small>
+            </h3>
+          </div>
+          <div class="col-md-2">
+            <h1><strong>Widget</strong></h1>
+          </div>
+          <div class="col-md-10">
+            <h3>Widget is an element that you can add into one Area. Each widget created can have multiple contents (elements). For example, an Activities or Sport's Activities Widget can store tons of activities.<br/>
+              <small>
+              IMPORTANT: The amount of widgets are almost unlimited, where you could have hundreds and pick up 10 of them to fit over the areas available.</small>
+            </h3>
+          </div>
+          <div class="col-md-2">
+            <h1><strong>Widget Type</strong></h1>
+          </div>
+          <div class="col-md-10">
+            <h3>Widgets has a type such as SimpleContent, LongContent, IconContent, Background or PageLink. Each type has small differences, for example, SimpleContent uses simple text and squared images when LongContent uses WYSIWYG and rectangular images. IconContent used icons instead of images</h3>
+            <h3>Some widgets such as Background and PageLink have special fields like URL and don't use simple text neigher WYSIWYG.</h3>
+          </div>
+          <div class="col-md-2">
+            <h1><strong>Widget Style</strong></h1>
+          </div>
+          <div class="col-md-10">
+            <h3>Style is about visual, how those widget's elements are displayed. It's possible to show just one element or multiple elements following 2, 3 or 4 elements per line.</h3>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <h1><strong>Page Widget</strong></h1>
+        </div>
+        <div class="col-md-10">
+          <h3>It's a special Widget that besides be pluggable inside an area, it has its own separated page. For example, the Newsfeeds Widget that might contains heaps of elements and be displayed over a separated page is more convinient.</h3>
+        </div>
+      </div>
+
+      <a href="{% url 'core.landingpage' %}">Back</a>
+
+    </div>
+
+  </section>
+
+{% endblock content %}

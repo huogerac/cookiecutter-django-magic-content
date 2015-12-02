@@ -1,0 +1,29 @@
+{% extends FRONTEND_THEME_BASE %}
+
+{% load magiccontent_tags %}
+{% load static %}
+
+{% block extracss %}
+{{ block.super }}
+<link href="{% static 'gallery/css/gallery.css' %}" rel="stylesheet" media="screen">
+{% endblock extracss %}
+
+{% block navbar %}
+  {% show_widget_area_tag 'top-menu' can_edit 'menuitem' page_url=page_url %}
+{% endblock navbar %}
+
+{% block footer_socialmedia %}
+{% endblock footer_socialmedia %}
+
+{% block extrajs %}
+  {{ block.super }}
+  <script>
+    $(document).ready(function() {
+
+      $('.nav_slide_button').click(function() {
+        $('.pull').slideToggle();
+      });
+
+    });
+  </script>
+{% endblock extrajs %}

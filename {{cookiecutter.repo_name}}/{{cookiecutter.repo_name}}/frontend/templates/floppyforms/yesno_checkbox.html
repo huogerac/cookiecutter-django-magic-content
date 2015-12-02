@@ -1,0 +1,15 @@
+<!-- floppyforms/yesno_checkbox.html -->
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label" for="{{ attrs.id }}">{{ attrs.help_text }} {% if required %}<span class="required">*</span>{% endif %}:</label>    
+  </div>
+  <div class="col-md-5">
+    <div class="yesnoswitch">
+      <input type="{{ type }}" name="{{ name }}"{% if value %} value="{{ value }}"{% endif %} class="yesnoswitch-checkbox" id="{{ attrs.id }}"{% if required %} required{% endif %}{% include "floppyforms/attrs.html" %}>
+      <label class="yesnoswitch-label" for="{{ attrs.id }}">
+        <span class="yesnoswitch-inner"></span>
+        <span class="yesnoswitch-switch"></span>
+      </label>
+    </div>        
+  </div>
+</div>

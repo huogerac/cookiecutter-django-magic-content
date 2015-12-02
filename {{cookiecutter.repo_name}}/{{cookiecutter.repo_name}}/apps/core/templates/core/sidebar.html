@@ -1,0 +1,20 @@
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li>
+        <a href="#menu-toggle" id="menu-toggle-close"><span class="pull-right"><i class="fa fa-times"></i></span></a>
+      </li>
+      <li class="sidebar-brand">
+        <strong>Your Aussie</strong> websites
+      </li>
+      {% if topmenu_widget %}
+        <li>
+          <a href="{% url 'navigation.page.create' topmenu_widget.id %}"><i class="fa fa-file-o"></i> New page</a>
+        </li>
+      {% endif %}
+      <li>
+        <a href="{% url 'galleries.gallery.list' %}"><i class="fa fa-image"></i> Image Gallery Manager</a>
+      </li>
+    </ul>
+  </div>

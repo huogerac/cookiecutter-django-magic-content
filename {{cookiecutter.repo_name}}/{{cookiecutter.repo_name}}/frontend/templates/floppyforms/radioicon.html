@@ -1,0 +1,15 @@
+<!-- floppyforms/radioicon.html -->
+<div class="row radioicon" id="{{ attrs.id }}">
+  <div data-toggle="buttons">
+    {% for group_name, choices in optgroups %}
+      {% for choice in choices %}
+        <label class="btn col-sm-1 radioicon-label{% if choice.0 in value %} active{% endif %}">
+          <div class="radioicon-control" style="padding: 5px;">
+            <i class="fa {{ choice.0 }} fa-lg"></i>
+            <input type="radio" class="icon_selector" id="{{ attrs.id }}_{{ forloop.counter }}" value="{{ choice.0 }}" name="{{ name }}"{% if required %} required{% endif %}{% if choice.0 in value %} checked{% endif %}>
+          </div>
+        </label>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

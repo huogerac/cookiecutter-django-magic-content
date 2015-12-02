@@ -1,0 +1,17 @@
+<!-- floppyforms/onoff_checkbox.html -->
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label" for="{{ attrs.id }}">{{ attrs.help_text }} {% if required %}<span class="required">*</span>{% endif %}:</label>    
+  </div>
+  <div class="col-md-5">
+    <div class="onoffswitch">
+      <input type="{{ type }}" name="{{ name }}"{% if value %} value="{{ value }}"{% endif %} class="onoffswitch-checkbox" id="{{ attrs.id }}"{% if required %} required{% endif %}{% include "floppyforms/attrs.html" %}>
+      <label class="onoffswitch-label" for="{{ attrs.id }}">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+      </label>
+    </div>        
+  </div>
+</div>
+<!--
+<label  for="id_contact_page">Contact page </label> -->

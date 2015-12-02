@@ -1,0 +1,250 @@
+@import sydney-styles
+@import _generated_colors
+
+body
+    color: #292929
+
+.content-padding
+    padding-top: 4rem
+    padding-bottom: 4rem
+
+.content-padding-top
+    padding-top: 4rem
+
+.content-padding-bottom
+    padding-bottom: 4rem
+
+.divider-padding
+    padding-top: 4rem
+    padding-bottom: 4rem
+
+.container-padding
+    padding-top: 0
+    padding-bottom: 0
+
+#main-background
+    +down2
+
+#content-intro
+    +base-bg
+    +ft4base-bg
+    text-align: center
+
+#content-one,
+#content-two,
+#content-three,
+#content-four,
+#content-five,
+#content-five
+    +base-bg
+    +ft4base-bg
+
+.divider-one,
+.divider-two,
+.divider-three
+    +down-bg
+    +ft4down-bg
+    h1
+        +white
+    a.btn-square
+        +trans-bg('black', 0.1)
+        +white
+    a.btn-square:hover
+        border-color: $up
+        +up
+
+.content-item
+    p
+        +ft4base-bg
+
+#main-notification
+    +white
+
+h2::after
+    +down2
+
+a
+    +down2
+
+a:hover
+    +down
+
+.down-arrow-btn
+    +ft4down2-bg
+
+header.navbar-default
+    +menu-trans-bg(0.8)
+    .navbar-nav > li > a
+        +ft4menu-bg
+
+.ns-box
+    +trans-bg('white', 0.9)
+    +ft4white-bg
+    z-index: 1000
+
+#site-footer
+    +menu-trans-bg(0.8)
+    +ft4menu-bg
+
+#socialmedia
+    +menu-trans-bg(0.8)
+
+.socialmedia_icons
+    height: 60px
+
+.footer
+    +menu-trans-bg(0.95)
+
+.down-bg a,
+.down2-bg a,
+.up-bg a,
+.up2-bg a
+    +white
+
+.btn-square
+    border: 1px solid
+    display: inline-block
+    font-weight: bold
+    letter-spacing: 1px
+    padding: 25px 40px
+
+.down2-bg a.btn-square:hover,
+.down2-bg a.btn-square:focus
+    +up-bg
+    +white
+
+.down-bg a.btn-square:hover,
+.down-bg a.btn-square:focus
+    +up-bg
+    +white
+
+.base-bg a.btn-square:hover,
+.base-bg a.btn-square:focus
+    +up-bg
+    +white
+
+.up-bg a.btn-square:hover,
+.up-bg a.btn-square:focus
+    +up2-bg
+    +white
+
+.up2-bg a.btn-square:hover,
+.up2-bg a.btn-square:focus
+    +up-bg
+    +white
+
+.btn-3d
+    +up-bg
+    +ft4up-bg
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    -o-border-radius: 5px
+    border-radius: 5px
+    -webkit-box-shadow: 0 3px 0 0 $up2
+    -moz-box-shadow: 0 3px 0 0 $up2
+    box-shadow: 0 3px 0 0 $up2
+    display: inline-block
+    font-weight: bold
+    letter-spacing: 1px
+    padding: 20px 40px
+
+.learn-more.btn:hover,
+.down-arrow-btn:hover
+    +down2-bg
+    +ft4down2-bg
+
+.up-bg .btn-3d
+    +down-bg
+    +ft4down-bg
+
+.up2-bg .btn-3d
+    -webkit-box-shadow: 0 3px 0 0 $down
+    -moz-box-shadow: 0 3px 0 0 $down
+    box-shadow: 0 3px 0 0 $down
+
+.down-arrow-btn
+    +ft4up-bg
+
+.down-arrow-btn:hover,
+.down-arrow-btn:focus
+    +down2-bg
+
+.up-bg .down-arrow-btn
+    +down-bg
+    +ft4down-bg
+
+.up-btn
+    +trans-bg('down', 0.5)
+    +ft4down-bg
+
+.up-btn:hover,
+.up-btn:focus
+    +ft4down-bg
+    +trans-bg('down', 0.9)
+
+.img .overlay
+    +ft4down-bg
+    +trans-bg('up2', 0.8)
+    a
+        +ft4down-bg
+    a:hover
+        +ft4down-bg
+
+.btn-primary
+    +ft4up-bg
+    +up-bg
+    border-color: $up2
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary
+    +ft4up2-bg
+    +up2-bg
+    border-color: $up2
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active
+    +trans-bg('up', 0.7)
+    border-color: $up2
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus
+    +ft4up-bg
+    +up-bg
+
+.caption-2::before
+    +down2-bg
+
+.caption-2::after
+    +down-bg
+
+.caption-3::before
+    +down2-bg
+
+.caption-3::after
+    +down-bg
+
+.half
+    +base-bg
+    padding: 20px 20px 0
+    position: relative
+    top: 260px
+
+#back-top:hover
+    +trans-bg('up2', 0.8)

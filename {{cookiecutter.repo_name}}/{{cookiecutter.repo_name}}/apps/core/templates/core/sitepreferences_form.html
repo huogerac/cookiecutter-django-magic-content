@@ -1,0 +1,37 @@
+{% extends 'core/base_core.html' %}
+
+{% load staticfiles %}
+{% load floppyforms %}
+
+{% block js_top %}
+  <!-- # django-floppyforms -->
+  {{ block.super }}
+  {{ form.media }}
+{% endblock %}
+
+{% block navbar %}
+{% endblock navbar %}
+
+{% block footer_area %}
+{% endblock footer_area %}
+
+{% block content %}
+  <div class="popup-content">
+    <h1>Site preferences</h1>
+    <div class="row">
+      <div class="col-lg-8">
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+          {{ form }}
+          <div class="bottom-fix-menu" align="center">
+            
+            <button type="submit" class="btn btn-lg btn-success">
+              <i class="fa fa-check"></i> Save
+            </button>
+            <a href="{% url 'magiccontent.windows_close' %}" class="btn btn-lg btn-danger" role="button"><i class="fa fa-times"></i> Cancel</a>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

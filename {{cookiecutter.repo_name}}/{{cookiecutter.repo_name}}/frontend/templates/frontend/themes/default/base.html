@@ -1,0 +1,148 @@
+{% extends 'frontend/themes/base.html' %}
+
+  {% load static %}
+
+  {% block title %}
+    {{ site_preferences.name }} {{ site_preferences.title }}
+  {% endblock title %}
+
+  {% block 3rdcss %}
+    {# 3rd css frameworks imported using bower #}
+    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'magnific-popup/dist/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome-bower/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'flexslider/flexslider.css' %}" rel="stylesheet">
+    {% if user.is_authenticated %}
+      <link href="{% static 'dropzone/dist/min/dropzone.min.css' %}" rel="stylesheet">
+    {% endif %}
+  {% endblock 3rdcss %}
+
+  {% block css %}
+    {# djenie components #}
+    <link href="{% static 'frontend-guide-utils/css/flip-switch.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/image-filters.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/image-grid.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/crossbrowser.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/frontend-guide.css?v=0.3.0' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/navigation.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/notification.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/queries.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/radio.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend-guide-utils/css/simple-sidebar.css' %}" rel="stylesheet">
+    {# Custom and Common CSS #}
+    <link href="{% static 'frontend/themes/default/css/magiccontent_v2.css?v=0.2.1' %}" rel="stylesheet">
+    {# HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries #}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {# CSS Color settings import (see /themes/theme_name/sass/styles.scss) #}
+    <link href="{% static FRONTEND_COLOR_CSS %}" rel="stylesheet">
+    {% if THEME_FONT_NAME %}
+      <link href="{% static THEME_FONT_NAME %}" rel="stylesheet">
+    {% endif %}
+  {% endblock css %}
+
+  {# USE THE js_top BLOCK to add javascripts here #}
+  {% block js_top %}
+    <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'frontend/themes/default/js/magiccontent.js' %}"></script>
+  {% endblock %}
+
+  {% block pre_body %}
+    <div id="wrapper" class="not toggled">
+  {% endblock pre_body %}
+
+  {% block pre_navbar %}
+    {% if user.is_authenticated %}
+      {% include 'core/sidebar.html' with manager_site=manager_site is_admin=is_admin is_owner=is_owner %}
+    {% endif %}
+  {% endblock pre_navbar %}
+
+  {% block pre_content %}
+  {% endblock pre_content %}
+
+  {# USE THE footer_area BLOCK to add content here #}
+  {% block footer_area %}
+
+    {# USE THE pre_footer BLOCK to add content here #}
+    {% block pre_footer %}
+      <section id="site-footer" class="site-footer text-center content-padding-top">
+        <div class="container container-padding">
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center {% if can_edit %}darkBorder edit-block{% endif %}">
+              {% if can_edit %}
+                <div class="edit-block-controls edit-popup">
+                  <a title="Edit element" href="{% url 'core.site.preferences.update' site_preferences.id %}" class="edit-block-edit">Edit</a>
+                </div>
+              {% endif %}
+              <h3><strong>{{ site_preferences.footer_title }}</strong></h3>
+              {% if site_preferences.footer_address %}
+                <p>{{ site_preferences.footer_address|safe }}</p>
+              {% endif %}
+              {% if site_preferences.footer_extra %}
+                <p>{{ site_preferences.footer_extra|safe }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+    {% endblock pre_footer %}
+
+    {# USE THE footer BLOCK to add content here #}
+    {% block footer %}
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="text-muted">Copyright © Aussie Sites 2015 - <a href="{% url 'core.builds' %}">Build - Dec 2015</a></p>
+            </div>
+            <div class="col-md-6 credit">
+              <p>Magically created by <a href="http://www.djenie.com/">Djenie</a></p>
+            </div>
+            <script>
+              $(function() {
+                $("#send-feedback").click(function(e) {
+                  e.preventDefault();
+                  $("#show-send-feedback").toggle();
+                  $("html, body").animate({
+                      scrollTop: $(document).height() - $(window).height()
+                  });
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </footer>
+    {% endblock footer %}
+
+    {# USE THE post_footer BLOCK to add content here #}
+    {% block post_footer %}
+    {% endblock post_footer %}
+
+  {% endblock footer_area %}
+
+  {% block post_body %}
+      <a id="back-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+  {% endblock post_body %}
+
+  {% block 3rdjs %}
+    {# 3rd JS frameworks imported from bower #}
+    <script src="{% static 'modernizr/modernizr.js' %}"></script>
+    <script src="{% static 'waypoints/lib/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'classie/classie.js' %}"></script>
+    <script src="{% static 'flexslider/jquery.flexslider-min.js' %}"></script>
+    {% if user.is_authenticated %}
+      <script src="{% static 'dropzone/dist/min/dropzone.min.js' %}"></script>
+    {% endif %}
+    {# djenie components #}
+    <script src="{% static 'frontend-guide-utils/js/notificationFx.js' %}"></script>
+    <script src="{% static 'frontend-guide-utils/js/image-grid.js' %}"></script>
+    
+    
+  {% endblock 3rdjs %}
