@@ -28,7 +28,8 @@ Pre Requirements
     $ sudo apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
     $ sudo apt-get python-imaging
 
-- NODE and NPM (install assets from bower)
+- NODE and NPM (install assets from bower) ::
+
     $ curl -sL https://deb.nodesource.com/setup | sudo bash -
     $ sudo apt-get install nodejs
     $ sudo npm install npm -g
@@ -104,3 +105,25 @@ Instead of having a monolitic app, django-magic-content is separated in:
 - `django-magicthemes <https://github.com/DjenieLabs/django-magicthemes>`_ : deal with the template beauty (CSS)
 
 - `django-magic-gallery <https://github.com/DjenieLabs/django-magic-gallery>`_ : deal with upload, crop images as soon as make an site image library 
+
+
+Any Problem?
+------------
+
+If you are not sure if this could help your case, drop us a message! It'll be a pleasure help you!
+
+
+Community
+---------
+
+Help us by adding `Issues https://github.com/huogerac/cookiecutter-django-magic-content/issues>`_ about something that you don't feel it's right
+
+If you don't agree the technology, some feature or the decision we've made, no problem! we're totally open for suggestion!
+
+Contribute, you can help us make the difference.
+
+
+Keep in touch
+-------------
+
+We're constantly improving those apps, keep one eye on it.
