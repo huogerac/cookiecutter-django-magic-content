@@ -14,6 +14,27 @@ It'll create a working django project structure (like when you use the `startpro
 
 It uses the django 1.7 and all the django-magic-content dependecies
 
+Pre Requirements
+----------------
+
+- Virtualenv (create isolated environment) ::
+    
+    $ sudo apt-get install python-pip
+    $ sudo pip install virtualenv
+
+- Pillow (make possible crop images) ::
+
+    $ sudo apt-get install python-dev python-setuptools
+    $ sudo apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
+    $ sudo apt-get python-imaging
+
+- NODE and NPM (install assets from bower)
+    $ curl -sL https://deb.nodesource.com/setup | sudo bash -
+    $ sudo apt-get install nodejs
+    $ sudo npm install npm -g
+    $ npm install -g bower
+
+
 Usage
 ------
 
@@ -45,14 +66,16 @@ It prompts you for questions. Answer them::
     year (default is "Current year")? 2015
 
 
-TODO ::
+Setup ::
 
     $ cd mysite/
     $ pip install -r requirements/local.txt
-    $ python ./manage.py syncdb
-    $ python ./manage.py migrate
-    $ ...complete here
-
+    $ chmod +x manage.py
+    $ ./manage.py syncdb
+    $ ./manage.py migrate
+    $ ./manage.py bower install
+    $ ./manage.py restore_site --backup-name=personal_website --site-id=1
+    $ ./manage.py runserver
 
 
 Dependencies
