@@ -74,11 +74,33 @@ Setup ::
     $ ./manage.py syncdb
     $ ./manage.py migrate
     $ ./manage.py bower install
+    $ ./manage.py generate_colors
     $ ./manage.py restore_site --backup-name=personal_website --site-id=1
     $ ./manage.py runserver
+
+
+Finally you can access the localhost:8000 and browser over you new awesome website.
+You can also login and go back to the localhost:8000 and modify any content, as soon add/change images...
 
 
 Dependencies
 ------------
 
+The django-magic-content uses as base architecture:
 
+- Django
+- django-floppyforms
+- django-ckeditor
+- django-image-cropping
+
+Instead of having a monolitic app, django-magic-content is separated in:
+
+- `django-multisites-utils <https://github.com/DjenieLabs/django-multisites-utils>`_ : deal with having more than 1 website over the same project
+
+- `django-magicbackup <https://github.com/DjenieLabs/django-magicbackup>`_ : helps backup/restore contents
+
+- `django-frontend-decouple <https://github.com/DjenieLabs/django-frontend-decouple>`_ : good practices over the django template side
+
+- `django-magicthemes <https://github.com/DjenieLabs/django-magicthemes>`_ : deal with the template beauty (CSS)
+
+- `django-magic-gallery <https://github.com/DjenieLabs/django-magic-gallery>`_ : deal with upload, crop images as soon as make an site image library 
