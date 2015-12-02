@@ -6,7 +6,6 @@ from django.contrib.sites.models import Site
 import floppyforms.__future__ as forms
 
 from floppyforms.widgets import TextInput
-from googleanalytics.models import GoogleAnalyticsPreferences
 
 from .models import SitePreferences
 
@@ -46,19 +45,3 @@ class SitePreferencesForm(forms.ModelForm):
         model = SitePreferences
         fields = ('title', 'name', 'footer_title',
                   'footer_address', 'footer_extra',)
-
-
-class GAPreferencesForm(forms.ModelForm):
-
-    class Meta:
-        model = GoogleAnalyticsPreferences
-        fields = ('tracking_id',)
-
-    def clean_tracking_id(self):
-        tracking_id = self.cleaned_data.get('tracking_id', '')
-        pattern = re.search(r'^(UA|YT|MO)-\d+-\d+', tracking_id)
-        if not pattern:
-            raise forms.ValidationError(
-                'Your tracking id is not valid, please, try again')
-
-        return tracking_id

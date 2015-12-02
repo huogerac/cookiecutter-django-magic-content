@@ -13,9 +13,10 @@ django-image-cropping==1.0.0
 easy-thumbnails==2.2
 djangorestframework==2.4.3
 django-model-utils==2.3.1
+django-taggit==0.14.0
+Fabric==1.10.2
 libsass==0.5.1
 sh==1.11
-django-taggit==0.14.0
 
 ## Djenie general apps
 -e git://github.com/DjenieLabs/django-multisites-utils.git#egg=django-multisites-utils

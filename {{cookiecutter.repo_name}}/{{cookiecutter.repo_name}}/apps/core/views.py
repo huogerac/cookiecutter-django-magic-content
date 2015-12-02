@@ -10,7 +10,7 @@ from magiccontent.mixins import OwnerRequiredMixin
 from magiccontentnavigation.models import MenuItem
 
 from .models import SitePreferences
-from .forms import SitePreferencesForm, GAPreferencesForm
+from .forms import SitePreferencesForm
 
 
 def can_edit_pages(user):
