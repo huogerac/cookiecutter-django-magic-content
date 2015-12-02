@@ -15,17 +15,6 @@ urlpatterns = patterns('',  # noqa
     url(r'^home/$', ShowLandingPageView.as_view(),
        name='core.landingpage'),
 
-    url(r'^builds/$', TemplateView.as_view(template_name="core/builds.html"),
-       name='core.builds'),
-
-    url(r'^glossary/$',
-       TemplateView.as_view(template_name="core/glossary.html"),
-       name='core.glossary'),
-
-    url(r'^help/$',
-       TemplateView.as_view(template_name="core/help.html"),
-       name='core.help'),
-
     url(r'^sitesetup/preferences/update/(?P<pk>\d+)/$',
        SitePreferencesUpdateView.as_view(),
        name='core.site.preferences.update'),
