@@ -22,11 +22,15 @@ Pre Requirements
     $ sudo apt-get install python-pip
     $ sudo pip install virtualenv
 
-- Pillow (make possible crop images) ::
-
+- Python projects in general
+    
     $ sudo apt-get install python-dev python-setuptools
+
+- Pillow (and django-image-cropping for image cropping) ::
+
+    $ sudo apt-get install libjpeg-dev
     $ sudo apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
-    $ sudo apt-get python-imaging
+    $ sudo apt-get install python-imaging
 
 - NODE and NPM (install assets from bower) ::
 
@@ -43,7 +47,7 @@ First, get cookiecutter_ installed ::
 
 Set up your virtualenv::
 
-    $ cd <your-envs-folder>
+    $ cd <your-workspace-folder>
     $ virtualenv  --no-site-packages mysite-env
     $ cd mysite-env
     $ source bin/activate
