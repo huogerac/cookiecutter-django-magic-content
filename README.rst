@@ -22,7 +22,7 @@ Pre Requirements
     $ sudo apt-get install python-pip
     $ sudo pip install virtualenv
 
-- Python projects in general
+- Python projects in general ::
     
     $ sudo apt-get install python-dev python-setuptools
 
@@ -32,12 +32,16 @@ Pre Requirements
     $ sudo apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
     $ sudo apt-get install python-imaging
 
-- NODE and NPM (install assets from bower) ::
+- NODE and NPM (install assets using bower) ::
 
     $ curl -sL https://deb.nodesource.com/setup | sudo bash -
     $ sudo apt-get install nodejs
     $ sudo npm install npm -g
     $ npm install -g bower
+    
+    # Test the installation using
+    $ node -v
+    $ npm -v
 
 
 Usage
